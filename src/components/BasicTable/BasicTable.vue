@@ -13,7 +13,7 @@
           placement="top"
         >
         <el-link  @click="item.method" :disabled="item.disabled">
-          {{ item.icon }}
+          {{ item.contents }}
         </el-link>
       </el-tooltip>
       </template>
@@ -22,7 +22,7 @@
 </template>
 
 <script setup lang="ts">
-// import { ref,defineProps,defineEmits } from "vue";
+import { ref,defineProps,defineEmits } from "vue";
 import {HandleOption,Column} from './interface'
 
 interface Props {

@@ -9,7 +9,7 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       title: '主页'
     },
-    component: () => import('../views/basic/home.vue'),
+    component: () => import('../views/main/main.vue'),
     children:[
       {
         path:'main',
@@ -29,14 +29,6 @@ const routes: Array<RouteRecordRaw> = [
     },
     component: () => import('../views/basic/404.vue')
   },
-  {
-    path: '/login',
-    name: '/login',
-    meta: {
-      title: '登录页'
-    },
-    component: () => import('../views/basic/login.vue')
-  },
 ]
 
 const router = createRouter({
@@ -51,7 +43,7 @@ router.beforeEach(async (to, from, next) => {
   console.log(to);
 
   if (!token && to.name !== '/login') {
-    router.push('./login')
+    // router.push('./login')
   }
   document.title = getPageTitle(to.meta.title);
   next();

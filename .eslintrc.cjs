@@ -9,6 +9,7 @@ module.exports = {
   ],
   rules: {
     // 代码风格
+    "no-unused-vars" : "off",
     'block-spacing': [2, 'always'],
     'brace-style': [2, '1tbs', {
       allowSingleLine: true
