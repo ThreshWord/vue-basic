@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@amap/amap-jsapi-loader": "^1.0.1",
+    "@vuemap/vue-amap": "^2.0.13",
+    "@vuemap/vue-amap-loca": "^2.0.5",
     "axios": "^1.4.0",
     "element-plus": "^2.3.4",
     "js-md5": "^0.7.3",
