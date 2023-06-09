@@ -4,20 +4,20 @@ import getPageTitle from "../utils/getPageTitle";
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    name: '/home',
+    name: 'home',
     redirect:'/main',
     meta: {
       title: '主页'
     },
-    component: () => import('../views/main/main.vue'),
+    component: () => import('../views/home/main.vue'),
     children:[
       {
         path:'main',
-        name:'首页',
+        name:'数智公交监管平台',
         meta:{
-          title:'首页'
+          title:'数智公交监管平台'
         },
-        component:()=>import('../views/main/main.vue')
+        component:()=>import('../views/home/main.vue')
       }
     ]
   },

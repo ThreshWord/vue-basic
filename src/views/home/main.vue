@@ -1,4 +1,5 @@
 <template>
+  <Header />
   <div class="map-page-container">
     <el-amap
       :center="center"
@@ -7,16 +8,12 @@
       :mapStyle="MAP_STYLE"
     />
   </div>
-  <div class="toolbar">
-    <button @click="add()">
-      添加标号
-    </button>
-  </div>
 </template>
 
 <script lang="ts" setup>
+import Header from '@/components/header/header.vue'
 import {ref} from "vue";
-import { MAP_STYLE } from '../../utils/MapKey.ts'
+import { MAP_STYLE } from '../../utils/MapKey'
 const zoom = ref(12);
 const center = ref([121.59996, 31.197646]);
 let map:any = null;
@@ -28,17 +25,11 @@ const init = (e:any) => {
   map = e;
   console.log('map init: ', map)
 }
-const add = () => {
-  const marker = new AMap.Marker({
-    position: [121.59996, 31.177646]
-  });
-  map.add(marker);
-}
 </script>
 
 <style>
 .map-page-container{
   width: 100%;
-  height: 97vh;
+  height: 98vh;
 }
 </style>

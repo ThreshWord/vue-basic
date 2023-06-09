@@ -9,6 +9,7 @@ import 'element-plus/dist/index.css'
 import './style.css'
 import { MAP_KEY } from "./utils/MapKey";
 
+
 initAMapApiLoader({
   key: MAP_KEY,
   securityJsCode: 'securityJsCode', // 新版key需要配合安全密钥使用

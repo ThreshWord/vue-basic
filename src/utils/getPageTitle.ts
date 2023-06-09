@@ -1,4 +1,5 @@
-const title:string = "能力平台";
+const title:string = "大屏";
+
 
 export default function getPageTitle(pageTitle:string|unknown) {
   if (pageTitle) {
